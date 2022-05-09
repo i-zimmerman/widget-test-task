@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+Task description:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technologies:
+1. TS for great typing support
+2. Css modules: really fast compared to css in js
+3. React 18, Router
+4. No state management library for the purpose of the task
 
-## Available Scripts
+How to run the task:
+1. yarn start - to start the dev server
+2. Go to public --> run widget.html to see widget on the separate page rendered by iframe
 
-In the project directory, you can run:
 
-### `yarn start`
+Social Feed React App
+Implement a widget, which renders N last social posts from the given JSON feed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The widget should pull updates from the feed with the given interval and update the displayed list by removing old items and displaying the new ones, so the most recent N posts will be displayed.
+Each post record should display:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Post date (formatted as DD/MM/YYYY HH:MM) in the user's timezone
+2. Author name
+3. Message body
 
-### `yarn test`
+The widget should accept the following configuration options:
+1. Feed URL
+2. Number of posts to display
+3. Update interval
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+While implementing, think about loading and rendering performance, memory usage and leaks.
+The following feed can be used as an example: http://api.massrelevance.com/MassRelDemo/kindle.json. It supports both CORS and JSONP. It also provides some Web API: http://dev.massrelevance.com/docs/api/v1.0/stream/#ref-params-standard
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Bonus points for more advanced webpack/babel configurations, adding unit tests, atomic component design and or use of higher order components, and UI/UX best practices.

@@ -1,0 +1,10 @@
+.socialFeedList {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    max-height: 350px;
+}
+
+.socialFeedListItem {
+    margin-right: 10px;
+}
